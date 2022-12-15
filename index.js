@@ -73,6 +73,8 @@ function listenForTransactionMine(transactionResponse, provider) {
     console.log(transactionResponse)
     console.log(`Mining ${transactionResponse.hash}`)
     return new Promise((resolve, reject) => {
+        //意思应该是如果收到transactionResponse带有hash的返回，就会调用(transactionReceipt)这个函数
+        //(transactionReceipt)里面的名字其实也可以不写，但${transactionReceipt.confirmations}应该就没内容了
         provider.once(transactionResponse.hash, (transactionReceipt) => {
             console.log(
                 `Completed with ${transactionReceipt.confirmations} confirmations`

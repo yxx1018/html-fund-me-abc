@@ -1,6 +1,13 @@
-export const contractAddress = "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512"
-//contractAddress需要启动node 会自动部署 找到地址粘贴过来
+export const contractAddress = "0xb058E1726E27e0Cd45704a1A65f1b543c16D2Afd"
+//contractAddress需要启动真的部署在goerli上去拿合约地址，!
+
 export const abi = [
+    //abi在artifacts-contracts-主合约的json文件提取，如果验证过也可以在链上提取，
+    // _format: "hh-sol-artifact-1",
+    // contractName: "FundMe",
+    // sourceName: "contracts/FundMe.sol",这些内容不用写上去
+    //有了这个abi，就算合约没公开验证，也可以调用前端来和合约进行交互，
+    //"0xb058E1726E27e0Cd45704a1A65f1b543c16D2Afd"这个合约我就没验证了
     {
         inputs: [
             {
